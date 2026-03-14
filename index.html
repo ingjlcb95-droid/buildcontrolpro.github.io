@@ -1,707 +1,953 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BuildControl Pro</title>
-
-<meta name="description" content="Construction estimating, documentation and project controls for contractors working on U.S. construction projects.">
-
-<style>
-
-:root{
---navy:#1F2D3D;
---navy-deep:#0F1A26;
---orange:#F05A28;
---light:#F4F6F8;
---gray:#6B7280;
---text:#243447;
---white:#FFFFFF;
---max-width:1180px;
---radius:22px;
---shadow:0 16px 40px rgba(15,26,38,0.08);
-}
-
-*{
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-margin:0;
-font-family:Segoe UI, Arial, Helvetica, sans-serif;
-color:var(--text);
-background:white;
-line-height:1.6;
-}
-
-.container{
-width:min(var(--max-width), calc(100% - 40px));
-margin:auto;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.nav{
-position:sticky;
-top:0;
-background:white;
-border-bottom:1px solid #eee;
-z-index:100;
-}
-
-.nav-inner{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:14px 0;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-font-weight:700;
-color:var(--navy);
-}
-
-.brand img{
-width:42px;
-height:42px;
-border-radius:10px;
-}
-
-.brand span{
-font-size:15px;
-font-weight:700;
-}
-
-.nav-links{
-display:flex;
-gap:24px;
-font-size:14px;
-color:var(--gray);
-}
-
-.nav-links a:hover{
-color:var(--navy);
-}
-
-.hero{
-background:linear-gradient(135deg,#ffffff 0%,#f7f9fb 45%,#eef3f8 100%);
-padding:80px 0;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:40px;
-align-items:center;
-}
-
-.hero h1{
-font-size:58px;
-line-height:1.05;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-color:var(--gray);
-max-width:600px;
-}
-
-.hero-actions{
-margin-top:20px;
-display:flex;
-gap:12px;
-}
-
-.btn{
-padding:14px 22px;
-border-radius:12px;
-font-weight:700;
-display:inline-block;
-}
-
-.btn-primary{
-background:var(--orange);
-color:white;
-}
-
-.btn-secondary{
-border:1px solid #ccc;
-background:white;
-}
-
-.hero-card{
-background:white;
-padding:30px;
-border-radius:30px;
-box-shadow:var(--shadow);
-}
-
-.section{
-padding:80px 0;
-}
-
-.section h2{
-font-size:40px;
-margin-bottom:12px;
-}
-
-.section p{
-color:var(--gray);
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:40px;
-}
-
-.service-card{
-border:1px solid #eee;
-padding:30px;
-border-radius:18px;
-box-shadow:var(--shadow);
-}
-
-.service-line{
-width:60px;
-height:5px;
-background:var(--orange);
-border-radius:50px;
-margin-bottom:20px;
-}
-
-.about-section{
-background:var(--light);
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:40px;
-align-items:center;
-}
-
-.about-visual{
-background:white;
-padding:30px;
-border-radius:24px;
-box-shadow:var(--shadow);
-}
-
-.about-content h2{
-font-size:42px;
-}
-
-.about-list{
-margin-top:15px;
-padding-left:18px;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:40px;
-}
-
-.why-card{
-padding:28px;
-border-radius:20px;
-color:white;
-}
-
-.why-card:nth-child(1){
-background:var(--navy-deep);
-}
-
-.why-card:nth-child(2){
-background:var(--navy);
-}
-
-.why-card:nth-child(3){
-background:#5f7286;
-}
-
-.cta{
-background:linear-gradient(135deg,var(--navy-deep),var(--navy));
-color:white;
-padding:80px 0;
-}
-
-.cta-wrap{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-}
-
-.cta h2{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.contact-section{
-background:linear-gradient(135deg,var(--navy-deep),var(--navy));
-color:white;
-padding:80px 0;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-.form-card{
-background:white;
-padding:28px;
-border-radius:20px;
-color:black;
-box-shadow:0 18px 40px rgba(0,0,0,0.2);
-}
-
-.form-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
-
-.form-group{
-display:flex;
-flex-direction:column;
-}
-
-.form-group.full{
-grid-column:1/-1;
-}
-
-input,select,textarea{
-padding:12px;
-border-radius:10px;
-border:1px solid #ccc;
-font-size:14px;
-}
-
-textarea{
-min-height:140px;
-resize:vertical;
-}
-
-.submit-btn{
-width:100%;
-margin-top:10px;
-background:var(--orange);
-border:none;
-color:white;
-padding:14px;
-font-weight:bold;
-border-radius:12px;
-cursor:pointer;
-}
-
-.footer-top{
-background:#0d141d;
-color:white;
-padding:60px 0 30px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:1.2fr .8fr .8fr;
-gap:40px;
-}
-
-.footer-brand{
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:15px;
-font-weight:800;
-font-size:22px;
-}
-
-.footer-brand img{
-width:50px;
-height:50px;
-border-radius:10px;
-}
-
-.socials{
-display:flex;
-gap:10px;
-margin-top:10px;
-}
-
-.socials a{
-width:40px;
-height:40px;
-background:#1e2a36;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-font-size:14px;
-}
-
-.footer-bottom{
-border-top:1px solid rgba(255,255,255,.08);
-margin-top:25px;
-padding-top:15px;
-display:flex;
-justify-content:space-between;
-font-size:14px;
-color:#aaa;
-}
-
-@media(max-width:900px){
-
-.hero-grid,
-.about-grid,
-.contact-grid,
-.footer-grid,
-.services,
-.why-grid{
-grid-template-columns:1fr;
-}
-
-.cta-wrap{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BuildControl Pro</title>
+  <meta
+    name="description"
+    content="BuildControl Pro provides construction estimating, documentation and project controls support for contractors working on U.S. construction projects."
+  />
+
+  <style>
+    :root{
+      --navy:#1F2D3D;
+      --navy-deep:#0F1A26;
+      --orange:#F05A28;
+      --light:#F4F6F8;
+      --gray:#6B7280;
+      --text:#243447;
+      --white:#FFFFFF;
+      --max-width:1180px;
+      --radius:22px;
+      --shadow:0 16px 40px rgba(15, 26, 38, 0.08);
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:Segoe UI, Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:min(var(--max-width), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,0.96);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid #e8edf3;
+    }
+
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      color:var(--navy);
+      letter-spacing:0.2px;
+    }
+
+    .brand img{
+      width:42px;
+      height:42px;
+      border-radius:10px;
+      object-fit:contain;
+    }
+
+    .brand span{
+      font-size:15px;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:14px;
+      color:var(--gray);
+    }
+
+    .nav-links a{
+      color:var(--gray);
+      transition:0.2s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--navy);
+    }
+
+    .hero{
+      background:linear-gradient(135deg, #ffffff 0%, #f7f9fb 45%, #eef3f8 100%);
+      padding:78px 0 70px;
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:44px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:16px;
+      padding:7px 14px;
+      border-radius:999px;
+      background:#eaf0f6;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.5px;
+      text-transform:uppercase;
+    }
+
+    .hero h1{
+      margin:0 0 18px;
+      font-size:62px;
+      line-height:1.02;
+      letter-spacing:-1.6px;
+      color:var(--navy-deep);
+      max-width:720px;
+    }
+
+    .hero p{
+      margin:0 0 28px;
+      max-width:640px;
+      font-size:20px;
+      color:var(--gray);
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 20px;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:700;
+      transition:0.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--orange);
+      color:#fff;
+      box-shadow:0 12px 22px rgba(240,90,40,0.18);
+    }
+
+    .btn-primary:hover{
+      filter:brightness(0.97);
+      text-decoration:none;
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--navy);
+      border-color:#d8e1ea;
+    }
+
+    .btn-secondary:hover{
+      background:#f8fafc;
+      text-decoration:none;
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border:1px solid #ebf0f4;
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      padding:34px;
+      position:relative;
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:18px;
+      border-radius:22px;
+      background:linear-gradient(135deg, rgba(31,45,61,0.03), rgba(240,90,40,0.04));
+      z-index:0;
+    }
+
+    .hero-card img{
+      position:relative;
+      z-index:1;
+      width:100%;
+      max-width:420px;
+      margin:0 auto;
+      object-fit:contain;
+    }
+
+    .section{
+      padding:88px 0;
+    }
+
+    .section-heading{
+      margin-bottom:36px;
+    }
+
+    .section-heading h2{
+      margin:0 0 12px;
+      font-size:40px;
+      line-height:1.1;
+      letter-spacing:-0.8px;
+      color:var(--navy-deep);
+    }
+
+    .section-heading p{
+      margin:0;
+      max-width:760px;
+      font-size:18px;
+      color:var(--gray);
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .service-card{
+      background:var(--white);
+      border:1px solid #e9eef4;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      min-height:100%;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 20px 45px rgba(15,26,38,0.11);
+    }
+
+    .service-line{
+      width:70px;
+      height:5px;
+      border-radius:999px;
+      background:var(--orange);
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:24px;
+      line-height:1.2;
+    }
+
+    .service-card p{
+      margin:0;
+      font-size:16px;
+      color:var(--text);
+    }
+
+    .about-section{
+      background:var(--light);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:0.95fr 1.05fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .about-visual{
+      background:linear-gradient(135deg, #dfe8f0 0%, #f5f7fa 100%);
+      border-radius:28px;
+      padding:24px;
+      min-height:440px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow);
+      border:1px solid #e6edf3;
+    }
+
+    .about-visual img{
+      max-width:340px;
+      width:100%;
+      object-fit:contain;
+    }
+
+    .about-content h2{
+      margin:0 0 18px;
+      font-size:48px;
+      line-height:1.04;
+      letter-spacing:-1px;
+      color:var(--navy-deep);
+    }
+
+    .about-content p{
+      margin:0 0 14px;
+      font-size:18px;
+      color:var(--text);
+    }
+
+    .about-list{
+      margin:20px 0 0;
+      padding-left:20px;
+    }
+
+    .about-list li{
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .why-card{
+      border-radius:24px;
+      padding:28px;
+      min-height:100%;
+      color:#fff;
+    }
+
+    .why-card:nth-child(1){
+      background:var(--navy-deep);
+    }
+
+    .why-card:nth-child(2){
+      background:var(--navy);
+    }
+
+    .why-card:nth-child(3){
+      background:linear-gradient(135deg, #42566d 0%, #60748b 100%);
+    }
+
+    .why-card h3{
+      margin:0 0 12px;
+      font-size:24px;
+      line-height:1.15;
+    }
+
+    .why-card p{
+      margin:0;
+      color:rgba(255,255,255,0.88);
+    }
+
+    .cta{
+      background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+      color:#fff;
+      padding:82px 0;
+    }
+
+    .cta-wrap{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:20px;
+      align-items:center;
+    }
+
+    .cta h2{
+      margin:0 0 10px;
+      font-size:44px;
+      line-height:1.06;
+      letter-spacing:-1px;
+    }
+
+    .cta p{
+      margin:0;
+      max-width:760px;
+      color:rgba(255,255,255,0.84);
+      font-size:18px;
+    }
+
+    .contact-section{
+      background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+      color:#fff;
+      padding:88px 0;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:40px;
+      align-items:start;
+    }
+
+    .contact-copy h2{
+      margin:0 0 14px;
+      font-size:44px;
+      line-height:1.06;
+      letter-spacing:-1px;
+    }
+
+    .contact-copy p{
+      margin:0 0 18px;
+      color:rgba(255,255,255,0.82);
+      font-size:18px;
+      max-width:540px;
+    }
+
+    .contact-points{
+      padding-left:18px;
+      color:rgba(255,255,255,0.88);
+    }
+
+    .contact-points li{
+      margin-bottom:10px;
+    }
+
+    .form-card{
+      background:#fff;
+      color:var(--text);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.18);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .form-group{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .form-group.full{
+      grid-column:1 / -1;
+    }
+
+    label{
+      font-size:14px;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:14px 14px;
+      border:1px solid #d7e0ea;
+      border-radius:14px;
+      font-size:15px;
+      font-family:inherit;
+      color:var(--text);
+      background:#fff;
+      outline:none;
+    }
+
+    input:focus, select:focus, textarea:focus{
+      border-color:var(--orange);
+      box-shadow:0 0 0 4px rgba(240,90,40,0.10);
+    }
+
+    textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .submit-btn{
+      width:100%;
+      border:none;
+    }
+
+    .form-note{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--gray);
+    }
+
+    .footer-top{
+      background:#0d141d;
+      color:#fff;
+      padding:70px 0 32px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr 0.8fr;
+      gap:36px;
+      align-items:start;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+      font-weight:800;
+      font-size:26px;
+    }
+
+    .footer-brand img{
+      width:54px;
+      height:54px;
+      border-radius:12px;
+      object-fit:contain;
+    }
+
+    .footer-copy{
+      max-width:520px;
+      color:rgba(255,255,255,0.76);
+      font-size:16px;
+      margin-bottom:22px;
+    }
+
+    .socials{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .socials a{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:700;
+      transition:0.2s ease;
+    }
+
+    .socials a:hover{
+      background:var(--orange);
+      border-color:var(--orange);
+    }
+
+    .footer-col h4{
+      margin:0 0 14px;
+      font-size:18px;
+      color:#fff;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .footer-links a{
+      color:rgba(255,255,255,0.75);
+      font-size:15px;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:34px;
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,0.65);
+      font-size:14px;
+    }
+
+    @media (max-width: 1040px){
+      .hero h1{
+        font-size:52px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .cta-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .services,
+      .why-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 720px){
+      .container{
+        width:min(var(--max-width), calc(100% - 24px));
+      }
+
+      .nav-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:16px;
+        flex-wrap:wrap;
+      }
+
+      .hero{
+        padding:56px 0 54px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p,
+      .section-heading p,
+      .about-content p,
+      .contact-copy p,
+      .cta p{
+        font-size:16px;
+      }
+
+      .section{
+        padding:68px 0;
+      }
+
+      .about-content h2,
+      .contact-copy h2,
+      .cta h2{
+        font-size:36px;
+      }
+
+      .section-heading h2{
+        font-size:34px;
+      }
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav class="nav">
-<div class="container nav-inner">
-
-<div class="brand">
-<img src="logo.png">
-<span>BuildControl Pro</span>
-</div>
-
-<div class="nav-links">
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
-</div>
-
-</div>
-</nav>
-
-
-<header class="hero">
-
-<div class="container hero-grid">
-
-<div>
-
-<h1>Construction estimating, documentation and project controls for contractors.</h1>
-
-<p>BuildControl Pro supports contractors and subcontractors working on U.S. construction projects with estimating, project documentation and project controls services.</p>
-
-<div class="hero-actions">
-
-<a class="btn btn-primary" href="#contact">Request a Quote</a>
-<a class="btn btn-secondary" href="#services">Explore Services</a>
-
-</div>
-
-</div>
-
-<div class="hero-card">
-
-<img src="logo.png">
-
-</div>
-
-</div>
-
-</header>
-
-
-<section class="section" id="services">
-
-<div class="container">
-
-<h2>Services</h2>
-
-<p>Focused support for contractors who need clearer documentation, stronger estimating and better project control.</p>
-
-<div class="services">
-
-<div class="service-card">
-<div class="service-line"></div>
-<h3>Construction Estimating</h3>
-<p>Takeoffs and bid support for construction projects.</p>
-</div>
-
-<div class="service-card">
-<div class="service-line"></div>
-<h3>Project Documentation</h3>
-<p>RFIs, change orders and documentation logs.</p>
-</div>
-
-<div class="service-card">
-<div class="service-line"></div>
-<h3>Project Controls</h3>
-<p>Cost tracking and documentation control.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section about-section" id="about">
-
-<div class="container about-grid">
-
-<div class="about-visual">
-<img src="logo.png">
-</div>
-
-<div class="about-content">
-
-<h2>Technical support built for contractors.</h2>
-
-<p>BuildControl Pro helps contractors manage estimating, documentation and project controls with structured workflows.</p>
-
-<ul class="about-list">
-<li>Construction estimating support</li>
-<li>RFIs and change order documentation</li>
-<li>Documentation logs and project control workflows</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section" id="why">
-
-<div class="container">
-
-<h2>Why BuildControl Pro</h2>
-
-<p>Structured support designed to improve visibility, documentation quality and project control.</p>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Clearer documentation</h3>
-<p>Improve communication through cleaner RFIs and change documentation.</p>
-</div>
-
-<div class="why-card">
-<h3>Stronger estimating support</h3>
-<p>Support bidding efforts with practical estimating workflows.</p>
-</div>
-
-<div class="why-card">
-<h3>Better project control</h3>
-<p>Keep documentation organized and reduce confusion.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="cta">
-
-<div class="container cta-wrap">
-
-<div>
-
-<h2>Need estimating or project documentation support?</h2>
-
-<p>Reach out to discuss your project needs.</p>
-
-</div>
-
-<a class="btn btn-primary" href="#contact">Contact Us</a>
-
-</div>
-
-</section>
-
-
-<section class="contact-section" id="contact">
-
-<div class="container contact-grid">
-
-<div>
-
-<h2>Request Information</h2>
-
-<p>Submit your project details and we will contact you shortly.</p>
-
-</div>
-
-<div class="form-card">
-
-<form action="https://api.web3forms.com/submit" method="POST">
-
-<input type="hidden" name="access_key" value="b97f45e4-eaa3-44f3-8442-380c62a5a5c6">
-
-<input type="hidden" name="subject" value="BuildControl Pro Contact Form">
-
-<input type="checkbox" name="botcheck" style="display:none;">
-
-<div class="form-grid">
-
-<div class="form-group">
-<input type="text" name="name" placeholder="Full Name" required>
-</div>
-
-<div class="form-group">
-<input type="text" name="company" placeholder="Company">
-</div>
-
-<div class="form-group">
-<input type="email" name="email" placeholder="Email" required>
-</div>
-
-<div class="form-group">
-<input type="text" name="phone" placeholder="Phone">
-</div>
-
-<div class="form-group full">
-
-<select name="service" required>
-
-<option value="">Service Needed</option>
-<option>Construction Estimating</option>
-<option>Project Documentation</option>
-<option>Project Controls</option>
-<option>RFI Management</option>
-<option>Change Order Support</option>
-<option>Cost Tracking</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-<div class="form-group full">
-
-<textarea name="message" placeholder="Describe your project"></textarea>
-
-</div>
-
-<div class="form-group full">
-
-<button class="submit-btn" type="submit">Submit Request</button>
-
-</div>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer class="footer-top">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<div class="footer-brand">
-
-<img src="logo.png">
-
-<span>BuildControl Pro</span>
-
-</div>
-
-<p>Construction estimating, documentation and project controls support for contractors working on U.S. construction projects.</p>
-
-<div class="socials">
-
-<a>in</a>
-<a>ig</a>
-<a>yt</a>
-<a>fb</a>
-<a>X</a>
-
-</div>
-
-</div>
-
-<div>
-
-<h4>Services</h4>
-
-<p>Construction Estimating</p>
-<p>Project Documentation</p>
-<p>Project Controls</p>
-
-</div>
-
-<div>
-
-<h4>Contact</h4>
-
-<p>projects@buildcontrolpro.com</p>
-<p>www.buildcontrolpro.com</p>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<div>BuildControl Pro © 2026</div>
-
-<div>Build smart. Document better. Control the work.</div>
-
-</div>
-
-</div>
-
-</footer>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="logo.png" alt="BuildControl Pro logo">
+        <span>BuildControl Pro</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Estimating & Project Controls</span>
+        <h1>Construction estimating, documentation and project controls for contractors.</h1>
+        <p>
+          BuildControl Pro supports contractors and subcontractors working on U.S.
+          construction projects with estimating, project documentation and
+          project controls services.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request a Quote</a>
+          <a class="btn btn-secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="logo.png" alt="BuildControl Pro">
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Services</h2>
+        <p>
+          Focused support for contractors who need clearer documentation,
+          stronger estimating and better project control.
+        </p>
+      </div>
+
+      <div class="services">
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Construction Estimating</h3>
+          <p>
+            Takeoffs, cost breakdowns and bid support for contractors working on
+            commercial, infrastructure and public works projects.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Project Documentation</h3>
+          <p>
+            RFIs, change orders, documentation logs and contract communication
+            support to help protect project performance.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Project Controls</h3>
+          <p>
+            Cost tracking, documentation control and structured project support
+            to improve clarity and reduce risk during execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <img src="logo.png" alt="BuildControl Pro symbol">
+      </div>
+
+      <div class="about-content">
+        <h2>Technical support built for contractors.</h2>
+        <p>
+          BuildControl Pro helps contractors manage estimating, documentation and project
+          controls with structured workflows.
+        </p>
+        <p>
+          Our focus is clarity, organization and practical support for real construction projects.
+        </p>
+
+        <ul class="about-list">
+          <li>Construction estimating support</li>
+          <li>RFIs and change order documentation</li>
+          <li>Documentation logs and project control workflows</li>
+          <li>Support for contractors and subcontractors on U.S. projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why BuildControl Pro</h2>
+        <p>
+          Structured support designed to improve visibility, documentation quality and project control
+          across active construction work.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Clearer documentation</h3>
+          <p>
+            Improve communication, tracking and project visibility through cleaner RFIs, logs
+            and change documentation.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Stronger estimating support</h3>
+          <p>
+            Support bidding efforts with practical estimating workflows and disciplined breakdowns
+            for real project execution.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Better project control</h3>
+          <p>
+            Keep documentation organized, reduce confusion and support a more controlled project environment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-wrap">
+      <div>
+        <h2>Need estimating or project documentation support?</h2>
+        <p>
+          Reach out to discuss your project needs and explore how BuildControl Pro can support your
+          estimating, documentation or project controls workflow.
+        </p>
+      </div>
+
+      <a class="btn btn-primary" href="#contact">Contact Us</a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <h2>Request Information</h2>
+        <p>
+          Submit your project details and we will contact you shortly.
+        </p>
+
+        <ul class="contact-points">
+          <li>Estimating support</li>
+          <li>RFIs and change order documentation</li>
+          <li>Project controls and documentation workflows</li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="b97f45e4-eaa3-44f3-8442-380c62a5a5c6">
+          <input type="hidden" name="subject" value="BuildControl Pro Contact Form">
+          <input type="hidden" name="from_name" value="BuildControl Pro Website">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone">
+            </div>
+
+            <div class="form-group full">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Construction Estimating</option>
+                <option>Project Documentation</option>
+                <option>Project Controls</option>
+                <option>RFI Management</option>
+                <option>Change Order Support</option>
+                <option>Cost Tracking</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" placeholder="Describe your project and the support you need." required></textarea>
+            </div>
+
+            <div class="form-group full">
+              <button class="btn btn-primary submit-btn" type="submit">Submit Request</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="form-note">
+          We’ll review your request and follow up by email.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="logo.png" alt="BuildControl Pro logo">
+            <span>BuildControl Pro</span>
+          </div>
+
+          <div class="footer-copy">
+            Construction estimating, documentation and project controls support
+            for contractors and subcontractors working on U.S. construction projects.
+          </div>
+
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="YouTube">yt</a>
+            <a href="#" aria-label="Facebook">fb</a>
+            <a href="#" aria-label="X">X</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="#services">Construction Estimating</a>
+            <a href="#services">Project Documentation</a>
+            <a href="#services">Project Controls</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
+            <a href="https://www.buildcontrolpro.com" target="_blank" rel="noopener noreferrer">www.buildcontrolpro.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>BuildControl Pro © 2026</div>
+        <div>Build smart. Document better. Control the work.</div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
