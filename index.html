@@ -1,154 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildControl Pro</title>
+  <meta
+    name="description"
+    content="BuildControl Pro provides construction estimating, documentation and project controls support for contractors working on U.S. projects."
+  />
 
-<title>BuildControl Pro</title>
+  <style>
+    :root{
+      --navy:#1F2D3D;
+      --navy-deep:#0F1A26;
+      --orange:#F05A28;
+      --light:#F4F6F8;
+      --gray:#6B7280;
+      --text:#243447;
+      --white:#FFFFFF;
+      --max-width:1100px;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(15, 26, 38, 0.08);
+    }
 
-<style>
+    *{
+      box-sizing:border-box;
+    }
 
-body{
-font-family:Segoe UI, Arial, sans-serif;
-margin:0;
-background:#ffffff;
-color:#1F3F5F;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-header{
-text-align:center;
-padding:60px 20px;
-}
+    body{
+      margin:0;
+      font-family:Segoe UI, Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.6;
+    }
 
-header img{
-width:240px;
-margin-bottom:20px;
-}
+    a{
+      color:var(--navy);
+      text-decoration:none;
+    }
 
-h1{
-font-size:36px;
-margin-bottom:10px;
-}
+    a:hover{
+      text-decoration:underline;
+    }
 
-.subtitle{
-color:#6B7280;
-font-size:18px;
-}
+    .container{
+      width:min(var(--max-width), calc(100% - 40px));
+      margin:0 auto;
+    }
 
-section{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-}
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,0.96);
+      border-bottom:1px solid #e9edf2;
+      backdrop-filter:blur(8px);
+    }
 
-.services{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:30px;
-}
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+    }
 
-.service{
-border-top:3px solid #F05A28;
-padding-top:15px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      color:var(--navy);
+      letter-spacing:0.1px;
+    }
 
-.service h3{
-margin-bottom:10px;
-}
+    .brand img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+      border-radius:10px;
+    }
 
-.contact{
-text-align:center;
-padding:60px;
-background:#f7f7f7;
-}
+    .nav-links{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      font-size:14px;
+      color:var(--gray);
+    }
 
-footer{
-text-align:center;
-padding:20px;
-font-size:12px;
-color:#777;
-}
+    .nav-links a{
+      color:var(--gray);
+    }
 
-@media(max-width:700px){
+    .hero{
+      padding:72px 0 64px;
+      background:
+        linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
+    }
 
-.services{
-grid-template-columns:1fr;
-}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:42px;
+      align-items:center;
+    }
 
-header img{
-width:180px;
-}
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#eef3f8;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.4px;
+      text-transform:uppercase;
+    }
 
-}
+    .hero h1{
+      margin:0 0 16px;
+      font-size:52px;
+      line-height:1.08;
+      color:var(--navy-deep);
+      letter-spacing:-1.2px;
+    }
 
-</style>
+    .hero p{
+      margin:0 0 26px;
+      max-width:650px;
+      font-size:18px;
+      color:var(--gray);
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:12px;
+      font-weight:600;
+      font-size:15px;
+      transition:0.2s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:var(--orange);
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      filter:brightness(0.96);
+      text-decoration:none;
+    }
+
+    .btn-secondary{
+      background:#fff;
+      border-color:#d9e2ec;
+      color:var(--navy);
+    }
+
+    .btn-secondary:hover{
+      background:#f8fafc;
+      text-decoration:none;
+    }
+
+    .hero-card{
+      background:var(--white);
+      border:1px solid #edf1f5;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+
+    .hero-card img{
+      width:100%;
+      max-width:440px;
+      display:block;
+      margin:0 auto;
+      object-fit:contain;
+    }
+
+    .section{
+      padding:78px 0;
+    }
+
+    .section-heading{
+      margin-bottom:32px;
+    }
+
+    .section-heading h2{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .section-heading p{
+      margin:0;
+      max-width:720px;
+      color:var(--gray);
+      font-size:17px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .service-card{
+      background:var(--white);
+      border:1px solid #e8edf3;
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      min-height:100%;
+    }
+
+    .service-line{
+      width:64px;
+      height:4px;
+      border-radius:999px;
+      background:var(--orange);
+      margin-bottom:18px;
+    }
+
+    .service-card h3{
+      margin:0 0 12px;
+      color:var(--navy);
+      font-size:22px;
+      line-height:1.2;
+    }
+
+    .service-card p{
+      margin:0;
+      color:var(--text);
+      font-size:16px;
+    }
+
+    .about-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .about-box,
+    .contact-box{
+      background:var(--light);
+      border-radius:24px;
+      padding:30px;
+      border:1px solid #e8edf3;
+    }
+
+    .about-box p,
+    .contact-box p{
+      margin:0 0 14px;
+      color:var(--text);
+    }
+
+    .about-list{
+      margin:16px 0 0;
+      padding-left:18px;
+      color:var(--text);
+    }
+
+    .about-list li{
+      margin-bottom:8px;
+    }
+
+    .contact-links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .contact-links a{
+      font-weight:600;
+    }
+
+    .footer{
+      border-top:1px solid #edf1f5;
+      padding:24px 0 36px;
+      color:var(--gray);
+      font-size:14px;
+      text-align:center;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .about-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .services{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:56px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(var(--max-width), calc(100% - 24px));
+      }
+
+      .nav-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:16px;
+        flex-wrap:wrap;
+      }
+
+      .hero h1{
+        font-size:36px;
+      }
+
+      .hero p,
+      .section-heading p{
+        font-size:16px;
+      }
+
+      .section{
+        padding:60px 0;
+      }
+
+      .hero-card{
+        padding:20px;
+      }
+    }
+  </style>
 </head>
-
-
 <body>
 
-<header>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="logo.png" alt="BuildControl Pro logo">
+        <span>BuildControl Pro</span>
+      </div>
 
-<img src="logo.png">
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<h1>BuildControl Pro</h1>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Estimating & Project Controls</span>
+        <h1>Construction estimating, documentation and project controls for contractors.</h1>
+        <p>
+          BuildControl Pro supports contractors and subcontractors working on U.S.
+          construction projects through estimating, project documentation and
+          project controls services.
+        </p>
 
-<p class="subtitle">
-Construction Documentation • Estimating • Project Controls
-</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:projects@buildcontrolpro.com">Request a Quote</a>
+          <a class="btn btn-secondary" href="#services">View Services</a>
+        </div>
+      </div>
 
-</header>
+      <div class="hero-card">
+        <img src="logo.png" alt="BuildControl Pro">
+      </div>
+    </div>
+  </header>
 
-<section>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Services</h2>
+        <p>
+          Focused support for contractors that need clearer documentation,
+          stronger estimating and better project control.
+        </p>
+      </div>
 
-<h2>Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Construction Estimating</h3>
+          <p>
+            Takeoffs, cost breakdowns and bid support for contractors working on
+            commercial, infrastructure and public works projects.
+          </p>
+        </div>
 
-<div class="services">
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Project Documentation</h3>
+          <p>
+            RFIs, change orders, documentation logs and contract communication
+            support to help protect project performance.
+          </p>
+        </div>
 
-<div class="service">
-<h3>Construction Estimating</h3>
-<p>
-Takeoffs, cost breakdowns and bid support for contractors working on U.S. construction projects.
-</p>
-</div>
+        <div class="service-card">
+          <div class="service-line"></div>
+          <h3>Project Controls</h3>
+          <p>
+            Cost tracking, documentation control and structured project support
+            to improve clarity and reduce risk during execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="service">
-<h3>Project Documentation</h3>
-<p>
-RFIs, change orders and documentation management to support contractors during project execution.
-</p>
-</div>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About BuildControl Pro</h2>
+        <p>
+          A focused technical partner for contractors who need disciplined
+          documentation, estimating accuracy and project control support.
+        </p>
+      </div>
 
-<div class="service">
-<h3>Project Controls</h3>
-<p>
-Cost tracking, documentation logs and project communication support.
-</p>
-</div>
+      <div class="about-wrap">
+        <div class="about-box">
+          <p>
+            BuildControl Pro provides construction estimating, project documentation
+            and project controls support for contractors working on projects in
+            the United States.
+          </p>
+          <p>
+            Our approach is centered on clarity, technical accuracy and practical
+            support for real project conditions.
+          </p>
+        </div>
 
-</div>
+        <div class="about-box">
+          <p><strong>Core focus:</strong></p>
+          <ul class="about-list">
+            <li>Construction estimating support</li>
+            <li>RFIs and change order documentation</li>
+            <li>Documentation logs and project control workflows</li>
+            <li>Support for contractors and subcontractors on U.S. projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Contact</h2>
+        <p>
+          Reach out to discuss estimating, documentation or project controls support.
+        </p>
+      </div>
 
-<section class="contact">
+      <div class="contact-box">
+        <div class="contact-links">
+          <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
+          <a href="https://www.buildcontrolpro.com" target="_blank" rel="noopener noreferrer">www.buildcontrolpro.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Contact</h2>
-
-<p>
-projects@buildcontrolpro.com
-</p>
-
-<p>
-www.buildcontrolpro.com
-</p>
-
-</section>
-
-<footer>
-
-BuildControl Pro © 2026
-
-</footer>
+  <footer class="footer">
+    <div class="container">
+      BuildControl Pro © 2026
+    </div>
+  </footer>
 
 </body>
 </html>
