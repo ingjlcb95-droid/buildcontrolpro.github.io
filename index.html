@@ -93,10 +93,10 @@
       },
       {
         "@type":"Question",
-        "name":"What do deliverables usually look like?",
+        "name":"What kinds of projects are you built for?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Depending on scope, deliverables may include quantity takeoffs, drawing markups, scope breakdowns, document logs, revision trackers, RFI logs, change backup packages, planning structures, and workflow reporting templates."
+          "text":"Our positioning is built around small trade-specific scopes, active commercial jobs, and public-sector or infrastructure environments where documentation pressure, coordination, and defensible records matter."
         }
       },
       {
@@ -327,13 +327,13 @@
     }
 
     .hero-copy {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     .eyebrow {
       display: inline-flex;
@@ -353,18 +353,18 @@
     }
 
     .hero h1 {
-  margin: 0 auto 18px;
-  max-width: 680px;
-  font-size: clamp(42px, 5.1vw, 64px);
-  line-height: 1.02;
-  letter-spacing: -1.8px;
-  color: var(--brand-deep);
-  text-align: left;
-  text-wrap: balance;
-}
+      margin: 0 0 18px;
+      max-width: 700px;
+      font-size: clamp(42px, 5.1vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -1.8px;
+      color: var(--brand-deep);
+      text-align: left;
+      text-wrap: balance;
+    }
 
     .hero-lead {
-      margin: 0 auto 24px;
+      margin: 0 0 24px;
       max-width: 720px;
       font-size: 20px;
       color: var(--text-muted);
@@ -420,10 +420,10 @@
     }
 
     .microproof {
-      display: flex-start;
+      display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .proof-pill {
@@ -477,7 +477,9 @@
     .process-card,
     .fit-card,
     .platform-card,
-    .faq-item {
+    .faq-item,
+    .exp-card,
+    .project-card {
       background: #fff;
       border: 1px solid #DDE5EE;
       border-radius: 24px;
@@ -497,17 +499,17 @@
     }
 
     .status-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: #E7F4EC;
-  color: #2F7A57;
-  font-size: 12px;
-  font-weight: 800;
-  white-space: nowrap;
-}
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #E7F4EC;
+      color: #2F7A57;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
 
     .hero-label {
       display: inline-flex;
@@ -582,7 +584,7 @@
     }
 
     .section-heading {
-      max-width: 860px;
+      max-width: 900px;
       margin-bottom: 40px;
     }
 
@@ -638,6 +640,186 @@
       color: rgba(255, 255, 255, 0.76);
       font-size: 14px;
       line-height: 1.6;
+    }
+
+    .experience-wrap {
+      display: grid;
+      gap: 24px;
+    }
+
+    .experience-summary {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .experience-main {
+      padding: 32px;
+      border-radius: 30px;
+      border: 1px solid #DDE6EF;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+      box-shadow: var(--shadow-md);
+    }
+
+    .experience-main .hero-label {
+      margin-bottom: 14px;
+    }
+
+    .experience-main h3 {
+      margin: 0 0 14px;
+      color: var(--brand-deep);
+      font-size: clamp(28px, 3.5vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.8px;
+    }
+
+    .experience-main p {
+      margin: 0 0 16px;
+      color: var(--text-muted);
+      font-size: 17px;
+    }
+
+    .exp-inline-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .exp-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(31, 45, 61, 0.06);
+      border: 1px solid #DCE5EE;
+      color: var(--brand-navy);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .experience-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .exp-card {
+      padding: 24px;
+    }
+
+    .exp-card .kicker {
+      display: inline-flex;
+      margin-bottom: 10px;
+      color: var(--brand-orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .exp-card h3 {
+      margin: 0 0 8px;
+      color: var(--brand-deep);
+      font-size: 24px;
+      line-height: 1.12;
+    }
+
+    .exp-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    }
+
+    .project-value {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(240, 90, 40, 0.10);
+      color: var(--brand-orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .project-card h3 {
+      margin: 0 0 8px;
+      color: var(--brand-deep);
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .entity-band {
+      padding: 26px 28px;
+      border-radius: 28px;
+      border: 1px solid #DCE5EE;
+      background: linear-gradient(135deg, #0F1A26 0%, #1A2A39 100%);
+      box-shadow: var(--shadow-md);
+      color: #fff;
+    }
+
+    .entity-band-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .entity-band h3 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      color: #fff;
+    }
+
+    .entity-band p {
+      margin: 0;
+      max-width: 900px;
+      color: rgba(255, 255, 255, 0.80);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .entity-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .entity-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(255, 255, 255, 0.94);
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
     }
 
     .fit-grid {
@@ -1303,7 +1485,8 @@
       .about-grid,
       .contact-grid,
       .cta-wrap,
-      .footer-grid {
+      .footer-grid,
+      .experience-summary {
         grid-template-columns: 1fr;
       }
 
@@ -1312,7 +1495,9 @@
       .use-grid,
       .platform-grid,
       .trust-grid,
-      .process-grid {
+      .process-grid,
+      .project-grid,
+      .entity-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -1326,9 +1511,9 @@
       }
 
       .hero h1 {
-  font-size: 54px;
-  max-width: 720px;
-}
+        font-size: 54px;
+        max-width: 720px;
+      }
     }
 
     html.js-enabled {}
@@ -1378,6 +1563,10 @@
         font-size: 46px;
         letter-spacing: -1.3px;
       }
+
+      .entity-band-head {
+        flex-direction: column;
+      }
     }
 
     @media (max-width: 720px) {
@@ -1395,10 +1584,10 @@
       }
 
       .hero h1 {
-  font-size: 38px;
-  letter-spacing: -1px;
-  max-width: 100%;
-}
+        font-size: 38px;
+        letter-spacing: -1px;
+        max-width: 100%;
+      }
 
       .hero-lead,
       .section-heading p,
@@ -1419,7 +1608,9 @@
       .trust-grid,
       .process-grid,
       .form-grid,
-      .services-grid {
+      .services-grid,
+      .project-grid,
+      .entity-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1435,7 +1626,11 @@
       .use-card,
       .platform-card,
       .fit-card,
-      .process-card {
+      .process-card,
+      .exp-card,
+      .project-card,
+      .experience-main,
+      .entity-band {
         padding: 22px;
       }
 
@@ -1482,6 +1677,7 @@
       </button>
 
       <ul class="nav-menu" id="primary-menu">
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#deliverables">Deliverables</a></li>
         <li><a href="#fit">Who We Serve</a></li>
@@ -1496,21 +1692,21 @@
     <header class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-  <span class="eyebrow">Estimating • Document Control • RFI & Change Support • Workflow Support</span>
-  <h1>Add estimating and document control capacity<br>without adding full-time overhead</h1>
-  <p class="hero-lead">
-    BuildControl Pro supports contractors and specialty trades when bid workload stacks up, RFIs start slipping, documentation gets messy, or project workflows need more structure. Support can be scoped around estimating, document control, change documentation, BIM coordination support, TAKT planning, or broader workflow needs.
-  </p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#contact">Request a Scope Review</a>
-    <a class="btn btn-secondary" href="#services">Explore Services</a>
-  </div>
-  <div class="microproof" aria-label="Key highlights">
-    <span class="proof-pill">Built for GCs and specialty trades</span>
-    <span class="proof-pill">Defined deliverables and scoped support</span>
-    <span class="proof-pill">Preconstruction through active project execution</span>
-    <span class="proof-pill">Built around U.S. construction workflows</span>
-  </div>
+          <span class="eyebrow">Estimating • Document Control • RFI & Change Support • BIM • TAKT • Workflow Support</span>
+          <h1>Add technical production capacity without adding full-time overhead</h1>
+          <p class="hero-lead">
+            BuildControl Pro supports contractors and specialty trades when bid workload stacks up, RFIs start slipping, change backup gets thin, revisions become harder to control, or project workflows need more structure. Support can be scoped around estimating, document control, change documentation, BIM coordination support, TAKT planning, or broader workflow needs.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a Scope Review</a>
+            <a class="btn btn-secondary" href="#experience">See Experience</a>
+          </div>
+          <div class="microproof" aria-label="Key highlights">
+            <span class="proof-pill">From small scopes to large public-sector environments</span>
+            <span class="proof-pill">Built for GCs and specialty trades</span>
+            <span class="proof-pill">Preconstruction through active execution support</span>
+            <span class="proof-pill">Structured around U.S. construction workflows</span>
+          </div>
         </div>
 
         <div class="hero-panel">
@@ -1522,7 +1718,7 @@
               </div>
               <h2>Practical support where workload and documentation usually break down.</h2>
               <p>
-                The pressure usually shows up in bid deadlines, loose scope separation, scattered drawing records, weak RFI follow-through, messy change backup, or reporting that starts slipping once the job gets busier.
+                The pressure usually shows up in bid deadlines, loose scope separation, scattered drawing records, buried RFIs, weak change backup, coordination drift, or reporting that starts slipping once the job gets busier.
               </p>
             </div>
 
@@ -1547,7 +1743,7 @@
                 <div class="panel-dot"></div>
                 <div>
                   <strong>Change and workflow support</strong>
-                  <span>RFI logs, change backup, planning structure, BIM coordination support, and project workflow visibility tied to the live need.</span>
+                  <span>RFI logs, change backup, planning structure, BIM coordination support, and workflow visibility tied to live project pressure.</span>
                 </div>
               </div>
             </div>
@@ -1561,7 +1757,7 @@
         <div class="trust-grid">
           <div class="trust-item">
             <strong>Built for U.S. construction workflows</strong>
-            <span>Support aligned to real contractor and specialty trade needs, not generic admin language.</span>
+            <span>Support aligned to real contractor and specialty trade needs, not generic back-office language.</span>
           </div>
           <div class="trust-item">
             <strong>Defined deliverables</strong>
@@ -1573,13 +1769,140 @@
           </div>
           <div class="trust-item">
             <strong>Built for project pressure</strong>
-            <span>Especially useful when bids stack up, records start slipping, or execution needs more structure.</span>
+            <span>Especially useful when bids stack up, records start slipping, change backup weakens, or execution needs more control.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="fit">
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected experience across California public and contractor-driven work</h2>
+          <p>
+            BuildControl Pro is positioned around real project pressure, from small trade-specific scopes around $5K to larger public-sector and infrastructure environments where total project values can exceed $300M+.
+          </p>
+        </div>
+
+        <div class="experience-wrap">
+          <div class="experience-summary">
+            <div class="experience-main">
+              <span class="hero-label">Why this matters</span>
+              <h3>Credibility built around real California construction exposure, not generic admin support.</h3>
+              <p>
+                Our background is tied to estimating, RFIs, change documentation, and project coordination for contractors working across roadway, municipal, public safety, healthcare, higher education, and active commercial environments.
+              </p>
+              <p>
+                The positioning is intentionally broad enough to speak to teams dealing with fast-turn scopes, bid pressure, and documentation-heavy public work, while still grounded in actual project types and real execution needs.
+              </p>
+              <div class="exp-inline-pills" aria-label="Experience highlights">
+                <span class="exp-pill">Small trade scopes around $5K</span>
+                <span class="exp-pill">Awarded public-sector bids</span>
+                <span class="exp-pill">California roadway and owner-driven work</span>
+                <span class="exp-pill">Project environments exceeding $300M+</span>
+              </div>
+            </div>
+
+            <div class="experience-side">
+              <article class="exp-card">
+                <span class="kicker">Project range</span>
+                <h3>From small scopes to major public environments</h3>
+                <p>
+                  Built to support teams handling everything from targeted field-driven scopes and fast-turn estimating packages to larger owner-driven jobs with heavier documentation, coordination, and compliance pressure.
+                </p>
+              </article>
+
+              <article class="exp-card">
+                <span class="kicker">Core exposure</span>
+                <h3>Roadway, municipal, public safety, healthcare, and education</h3>
+                <p>
+                  A strong fit for California contractors and specialty trades operating in infrastructure, public agency, and documentation-heavy project environments where missed scope and weak records create real exposure.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-value">Higher Education • $2.8M</span>
+              <h3>UCSC Westside Research Park</h3>
+              <p>
+                Estimating and support work tied to a university environment where scope clarity, coordination, and disciplined documentation matter.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-value">Public Safety • $1.8M</span>
+              <h3>San Jose Fire Station No. 8 Relocation</h3>
+              <p>
+                Public-sector facility exposure tied to contractor workflows where bid support, records, and execution follow-through need to stay controlled.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-value">Public Safety • $1.8M</span>
+              <h3>San Jose Police Air Support Hangar</h3>
+              <p>
+                Support aligned with public-owner documentation expectations, field coordination, and cleaner records around active electrical scopes.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-value">Municipal • $640K</span>
+              <h3>RWF Main Entrance Improvements</h3>
+              <p>
+                Municipal and infrastructure support where revisions, field conditions, and scope movement must be documented clearly.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-value">Healthcare • $650K</span>
+              <h3>St. Louise Regional Hospital</h3>
+              <p>
+                Healthcare-related project exposure tied to disciplined execution support, cleaner communication, and defensible documentation.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-value">Roadway • Up to $5.7M</span>
+              <h3>Multiple Caltrans Packages</h3>
+              <p>
+                Experience supporting highway and roadway bid environments where takeoff discipline, scope separation, and owner-driven records matter.
+              </p>
+            </article>
+          </div>
+
+          <div class="entity-band">
+            <div class="entity-band-head">
+              <div>
+                <h3>Built for California agency and public-owner environments</h3>
+                <p>
+                  Direct experience anchors in California public and infrastructure work such as Caltrans, municipal projects, public safety facilities, education, and healthcare. The broader delivery style is also aligned with documentation-heavy owner environments often seen across major agencies, transit authorities, cities, and counties throughout California.
+                </p>
+              </div>
+              <span class="status-badge">California Focus</span>
+            </div>
+
+            <div class="entity-grid" aria-label="Agency and owner environment references">
+              <div class="entity-item">Caltrans</div>
+              <div class="entity-item">City Public Works Departments</div>
+              <div class="entity-item">County Agency Environments</div>
+              <div class="entity-item">LA Metro-Type Workflows</div>
+              <div class="entity-item">BART-Type Environments</div>
+              <div class="entity-item">SFMTA-Type Environments</div>
+              <div class="entity-item">VTA-Type Environments</div>
+              <div class="entity-item">OCTA-Type Environments</div>
+              <div class="entity-item">SacRT-Type Environments</div>
+              <div class="entity-item">San Diego MTS-Type Environments</div>
+              <div class="entity-item">University Projects</div>
+              <div class="entity-item">Healthcare Facilities</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-bg" id="fit">
       <div class="container">
         <div class="section-heading">
           <h2>Who this is built for</h2>
@@ -1606,7 +1929,7 @@
           <article class="fit-card">
             <h3>Teams under deadline pressure</h3>
             <p>
-              Especially useful when bid deadlines tighten, project records start slipping, change backup gets weak, or the admin side of the job starts lagging behind the work.
+              Especially useful when bid deadlines tighten, records start slipping, change backup gets weak, or the admin side of the job starts lagging behind the work.
             </p>
           </article>
         </div>
@@ -1968,6 +2291,13 @@
               We are most useful when estimating workload spikes, documentation starts slipping, change backup needs to become more defensible, coordination follow-through weakens, or reporting discipline starts falling behind the pace of the job.
             </div>
           </details>
+
+          <details class="faq-item">
+            <summary>What kinds of owners and environments are you built for?</summary>
+            <div class="faq-answer">
+              The positioning fits public-sector, municipal, roadway, education, healthcare, and contractor-driven environments where documentation quality, scope control, and stronger records are critical to execution.
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -2024,7 +2354,7 @@
           <div class="form-head">
             <h3>Tell us about your project</h3>
             <p>
-              Keep it simple. Share who you are, what support is needed, and where the workflow is currently getting stuck.
+              Keep it simple. Share who you are, what support is needed, timeline, and where the workflow is currently getting stuck.
             </p>
           </div>
 
