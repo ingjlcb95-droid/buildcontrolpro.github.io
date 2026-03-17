@@ -1318,6 +1318,8 @@
       }
     }
 
+    html.js-enabled {}
+
     @media (max-width: 860px) {
       .hero h1 {
         max-width: 16ch;
@@ -1340,7 +1342,7 @@
         top: calc(100% + 10px);
         right: 0;
         left: 0;
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 14px;
@@ -1351,7 +1353,11 @@
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
       }
 
-      .nav-menu.is-open {
+      html.js-enabled .nav-menu {
+        display: none;
+      }
+
+      html.js-enabled .nav-menu.is-open {
         display: flex;
       }
 
@@ -1488,7 +1494,7 @@
           </div>
         </div>
 
-        <div class="hero-panel" aria-hidden="true">
+        <div class="hero-panel">
           <div class="hero-stack">
             <div class="hero-card">
               <div class="panel-head">
@@ -1817,31 +1823,31 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <h2>Workflow environments we can align with</h2>
+          <h2>Software and workflow alignment</h2>
           <p>
-            The support is designed to fit into real contractor workflows, from drawing review to tracking logs and active project reporting.
+            Support is built to plug into the systems, file standards, and reporting structure your team already uses, without forcing a new layer of process on top of active work.
           </p>
         </div>
 
         <div class="platform-grid">
           <article class="platform-card">
-            <h3>Estimating workflows</h3>
+            <h3>Common platforms</h3>
             <p>
-              Estimating support can align with your takeoff process, internal worksheets, trade breakdowns, and bid organization standards.
+              We can align with workflows built around platforms such as Procore, Autodesk Construction Cloud, Bluebeam, Revit, Navisworks, Excel, Smartsheet, Primavera P6, and MS Project, among others.
             </p>
           </article>
 
           <article class="platform-card">
-            <h3>BIM and coordination workflows</h3>
+            <h3>How support plugs into your team</h3>
             <p>
-              BIM and coordination support can align with model review, drawing-based coordination, issue tracking, and meeting follow-up structure.
+              Work can be scoped by workflow, aligned to your file standards, delivered in your reporting cadence, and structured around the active priorities driving the project.
             </p>
           </article>
 
           <article class="platform-card">
-            <h3>Documentation and controls workflows</h3>
+            <h3>Built for real project pressure</h3>
             <p>
-              Documentation and controls support can align with the systems your team already uses for RFIs, submittals, changes, logs, and reporting.
+              The focus is margin protection, scope clarity, coordination exposure reduction, defensible change documentation, reporting discipline, and cleaner execution under schedule pressure.
             </p>
           </article>
         </div>
@@ -1928,37 +1934,37 @@
 
         <div class="faq-list">
           <details class="faq-item">
-            <summary>Who do you work with?</summary>
+            <summary>What software can you work with?</summary>
             <div class="faq-answer">
-              We work with general contractors and specialty trades on U.S. construction projects that need support with estimating, BIM coordination, document control, RFIs, change orders, TAKT planning, or project controls.
+              Depending on the workflow, support can align with Procore, Autodesk Construction Cloud, Bluebeam, Revit, Navisworks, Excel, Smartsheet, Primavera P6, MS Project, and client-specific file structures.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary>Can support be scoped to one service only?</summary>
+            <summary>Can support be scoped to one workflow only?</summary>
             <div class="faq-answer">
-              Yes. Support can be scoped around a single need such as quantity takeoffs, coordination drawings, document control, RFI logs, change order backup, planning support, or a broader package across multiple workflows.
+              Yes. Support can be scoped around a single need such as takeoffs, BIM coordination support, document control, RFI drafting and tracking, change order backup, TAKT planning support, or project controls reporting.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary>Do you support both preconstruction and active projects?</summary>
+            <summary>What do deliverables usually look like?</summary>
             <div class="faq-answer">
-              Yes. Some engagements are strictly preconstruction, such as estimating and takeoff support. Others are active project support, such as BIM coordination, RFIs, change documentation, TAKT workflow support, and controls tracking.
+              Deliverables depend on scope, but may include marked-up takeoffs, scope breakdowns, BIM support files, coordination drawings, document logs, RFI trackers, defensible change order backup, planning structures, and reporting templates.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary>What kind of deliverables do clients typically receive?</summary>
+            <summary>Can you work with our internal team and file standards?</summary>
             <div class="faq-answer">
-              Depending on the scope, deliverables may include takeoffs, drawing markups, BIM support files, coordination drawings, issue logs, document registers, RFI tracking, change order backup, planning structures, reporting templates, and workflow documentation tied to the live need.
+              Yes. Support is meant to plug into the existing team, file naming rules, reporting cadence, and project priorities so work can move without unnecessary friction.
             </div>
           </details>
 
           <details class="faq-item">
-            <summary>How do we get started?</summary>
+            <summary>What kinds of project pressure are you best suited for?</summary>
             <div class="faq-answer">
-              Send your project details, trade, timeline, and service need. We review the scope, identify the workflow gap, and define the right deliverables and support path for your team.
+              We are most useful when estimating workload spikes, coordination exposure is growing, documentation starts slipping, change order backup needs to become more defensible, or reporting discipline is weakening under schedule pressure.
             </div>
           </details>
         </div>
@@ -2078,6 +2084,52 @@
                 </select>
               </div>
 
+              <div class="form-group">
+                <label for="project-phase">Project Phase</label>
+                <select id="project-phase" name="project_phase" required>
+                  <option value="">Select phase</option>
+                  <option>Bidding / Preconstruction</option>
+                  <option>Coordination / Pre-installation</option>
+                  <option>Active Construction</option>
+                  <option>Closeout / Project Controls</option>
+                  <option>Multiple Phases</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="bid-date">Bid Date or Required Start</label>
+                <input type="date" id="bid-date" name="bid_date" />
+              </div>
+
+              <div class="form-group">
+                <label for="software">Primary Software / Platform</label>
+                <select id="software" name="software">
+                  <option value="">Select primary platform</option>
+                  <option>Procore</option>
+                  <option>Autodesk Construction Cloud</option>
+                  <option>Bluebeam</option>
+                  <option>Revit</option>
+                  <option>Navisworks</option>
+                  <option>Excel</option>
+                  <option>Smartsheet</option>
+                  <option>Primavera P6</option>
+                  <option>MS Project</option>
+                  <option>Other / Mixed</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Support Timeline</label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select timeline</option>
+                  <option>Immediate</option>
+                  <option>This week</option>
+                  <option>Within 2 weeks</option>
+                  <option>This month</option>
+                  <option>Planning ahead</option>
+                </select>
+              </div>
+
               <div class="form-group full">
                 <label for="service">Primary Service Need</label>
                 <select id="service" name="service" required>
@@ -2112,7 +2164,7 @@
           </form>
 
           <div class="form-note">We review requests manually and follow up by email.</div>
-          <div class="privacy-note">By submitting this form, you agree to be contacted regarding your inquiry.</div>
+          <div class="privacy-note">This form sends inquiry data through Web3Forms. Replace the placeholder access key before going live and add your final privacy policy link here.</div>
         </div>
       </div>
     </section>
@@ -2167,6 +2219,8 @@
   </footer>
 
   <script>
+    document.documentElement.classList.add('js-enabled');
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
