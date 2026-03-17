@@ -3,61 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="BuildControl Pro | Construction Estimating & Project Documentation">
-  <meta property="og:description" content="Construction estimating support, RFI management and change order documentation for contractors working on U.S. construction projects.">
-  <meta property="og:image" content="https://buildcontrolpro.com/logo.png">
-  <meta property="og:url" content="https://buildcontrolpro.com">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="logo.png">
-  <title>Construction Estimating | BIM Coordination | TAKT Planning | BuildControl Pro</title>
-  <meta name="description" content="Construction estimating, BIM coordination, TAKT planning, RFI management, change order documentation and project controls services for contractors working on U.S. construction projects.">
-  
-      <meta name="keywords" content="construction estimating support, BIM coordination, TAKT planning, RFI management, change orders construction, project documentation services, project controls construction">
 
-      <meta name="robots" content="index, follow">
+  <title>Construction Estimating, BIM Coordination & Project Controls | BuildControl Pro</title>
+  <meta
+    name="description"
+    content="BuildControl Pro provides construction estimating support, BIM coordination, TAKT planning, RFI and change order documentation, and project controls support for contractors and subcontractors working on U.S. projects."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://buildcontrolpro.com" />
+  <link rel="icon" type="image/png" href="logo.png" />
 
-      <link rel="canonical" href="https://buildcontrolpro.com">
+  <meta property="og:title" content="BuildControl Pro | Estimating, BIM Coordination & Project Controls" />
+  <meta
+    property="og:description"
+    content="Technical support for contractors who need accurate estimating, stronger documentation, BIM coordination, and tighter project control."
+  />
+  <meta property="og:image" content="https://buildcontrolpro.com/logo.png" />
+  <meta property="og:url" content="https://buildcontrolpro.com" />
+  <meta property="og:type" content="website" />
 
-        <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "BuildControl Pro",
-  "url": "https://buildcontrolpro.com",
-  "logo": "https://buildcontrolpro.com/logo.png",
-  "telephone": "+1-669-400-0740",
-  "sameAs": [
-    "https://www.linkedin.com/company/buildcontrol-pro",
-    "https://www.instagram.com/buildcontrolpro",
-    "https://www.fb.com/buildprooopoo"
-  ],
-  "description": "BuildControl Pro provides construction estimating support, RFI management, change order documentation and project controls services for contractors working on U.S. construction projects.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "serviceType": [
-    "Construction Estimating Support",
-    "RFI Management",
-    "Change Order Documentation",
-    "Construction Project Controls",
-    "Construction Documentation Services"
-  ]
-}
-</script>
-  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BuildControl Pro | Estimating, BIM Coordination & Project Controls" />
+  <meta
+    name="twitter:description"
+    content="Technical support for contractors who need accurate estimating, stronger documentation, BIM coordination, and tighter project control."
+  />
+  <meta name="twitter:image" content="https://buildcontrolpro.com/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "BuildControl Pro",
+    "url": "https://buildcontrolpro.com",
+    "logo": "https://buildcontrolpro.com/logo.png",
+    "image": "https://buildcontrolpro.com/logo.png",
+    "telephone": "+1-669-400-0740",
+    "email": "projects@buildcontrolpro.com",
+    "description": "BuildControl Pro provides construction estimating support, BIM coordination, TAKT planning, RFI and change order documentation, and project controls support for contractors and subcontractors working on U.S. construction projects.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/buildcontrol-pro",
+      "https://www.instagram.com/buildcontrolpro",
+      "https://www.fb.com/buildprooopoo"
+    ],
+    "serviceType": [
+      "Construction Estimating Support",
+      "BIM Coordination Support",
+      "TAKT Planning Support",
+      "RFI Management Support",
+      "Change Order Documentation Support",
+      "Construction Project Controls",
+      "Construction Documentation Support"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-669-400-0740",
+      "contactType": "sales",
+      "areaServed": "US",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+
   <style>
     :root{
       --navy:#1F2D3D;
       --navy-deep:#0F1A26;
       --orange:#F05A28;
+      --orange-soft:#FF784D;
       --light:#F4F6F8;
-      --gray:#6B7280;
+      --muted:#6B7280;
       --text:#243447;
       --white:#FFFFFF;
+      --line:#DCE4EC;
+      --line-strong:#CCD7E2;
+      --success:#117A45;
       --max-width:1180px;
       --radius:22px;
+      --radius-sm:14px;
       --shadow:0 16px 40px rgba(15, 26, 38, 0.08);
+      --shadow-strong:0 22px 55px rgba(15, 26, 38, 0.12);
     }
 
     *{
@@ -74,11 +103,8 @@
       color:var(--text);
       background:var(--white);
       line-height:1.6;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
     }
 
     img{
@@ -86,85 +112,141 @@
       display:block;
     }
 
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
+
     .container{
       width:min(var(--max-width), calc(100% - 40px));
       margin:0 auto;
     }
 
+    .skip-link{
+      position:absolute;
+      top:-50px;
+      left:16px;
+      background:var(--orange);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:10px;
+      z-index:999;
+      font-weight:700;
+    }
+
+    .skip-link:focus{
+      top:16px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    summary:focus-visible{
+      outline:3px solid rgba(240,90,40,0.35);
+      outline-offset:3px;
+    }
+
     .nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(15,26,38,0.95);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-}
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(15,26,38,0.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
 
-.nav-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  padding:10px 0;
-}
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding:12px 0;
+    }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:700;
-  color:#fff;
-  letter-spacing:0.2px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#fff;
+      font-weight:800;
+      letter-spacing:0.2px;
+      min-width:0;
+    }
 
-.brand img{
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  object-fit:contain;
-}
+    .brand img{
+      width:44px;
+      height:44px;
+      border-radius:10px;
+      object-fit:contain;
+      flex-shrink:0;
+    }
 
-.brand span{
-  font-size:15px;
-  font-weight:700;
-  color:#fff;
-}
+    .brand span{
+      font-size:15px;
+      white-space:nowrap;
+    }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  font-size:14px;
-}
+    .nav-menu{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      list-style:none;
+      margin:0;
+      padding:0;
+      flex-wrap:wrap;
+    }
 
-.nav-links a{
-  color:rgba(255,255,255,0.75);
-  transition:0.2s ease;
-}
+    .nav-menu a{
+      color:rgba(255,255,255,0.78);
+      font-size:14px;
+      font-weight:600;
+      transition:0.2s ease;
+    }
 
-.nav-links a:hover{
-  color:#fff;
-}
+    .nav-menu a:hover{
+      color:#fff;
+    }
+
+    .nav-cta{
+      padding:10px 16px;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--orange) 0%, var(--orange-soft) 100%);
+      color:#fff !important;
+      box-shadow:0 10px 24px rgba(240,90,40,0.22);
+    }
 
     .hero{
-      background:linear-gradient(135deg, #ffffff 0%, #f7f9fb 45%, #eef3f8 100%);
-      padding:78px 0 70px;
+      background:
+        radial-gradient(circle at top right, rgba(240,90,40,0.08), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #f7f9fb 48%, #eef3f8 100%);
+      padding:84px 0 72px;
       overflow:hidden;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:44px;
+      grid-template-columns:1.08fr 0.92fr;
+      gap:42px;
       align-items:center;
     }
 
     .eyebrow{
-      display:inline-block;
-      margin-bottom:16px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:18px;
       padding:7px 14px;
       border-radius:999px;
-      background:#eaf0f6;
+      background:#EAF0F6;
       color:var(--navy);
       font-size:12px;
       font-weight:800;
@@ -174,7 +256,7 @@
 
     .hero h1{
       margin:0 0 18px;
-      font-size:62px;
+      font-size:60px;
       line-height:1.02;
       letter-spacing:-1.6px;
       color:var(--navy-deep);
@@ -182,105 +264,176 @@
     }
 
     .hero p{
-      margin:0 0 28px;
-      max-width:640px;
+      margin:0 0 26px;
+      max-width:660px;
       font-size:20px;
-      color:var(--gray);
+      color:var(--muted);
     }
 
     .hero-actions{
       display:flex;
       gap:14px;
       flex-wrap:wrap;
+      margin-bottom:28px;
     }
 
     .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:15px 22px;
-  border-radius:14px;
-  font-size:15px;
-  font-weight:700;
-  transition:0.2s ease;
-  border:1px solid transparent;
-  cursor:pointer;
-  letter-spacing:0.2px;
-}
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:14px 22px;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:800;
+      transition:0.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+      letter-spacing:0.2px;
+    }
 
-.btn-primary{
-  background:linear-gradient(135deg, #f05a28 0%, #ff784d 100%);
-  color:#fff;
-  box-shadow:0 14px 28px rgba(240,90,40,0.22);
-}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--orange) 0%, var(--orange-soft) 100%);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(240,90,40,0.22);
+    }
 
-.btn-primary:hover{
-  transform:translateY(-1px);
-  box-shadow:0 18px 34px rgba(240,90,40,0.28);
-  text-decoration:none;
-}
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 18px 34px rgba(240,90,40,0.28);
+    }
 
-.btn-secondary{
-  background:rgba(255,255,255,0.88);
-  color:var(--navy);
-  border-color:#d8e1ea;
-  box-shadow:0 8px 20px rgba(15,26,38,0.04);
-}
+    .btn-secondary{
+      background:rgba(255,255,255,0.92);
+      color:var(--navy);
+      border-color:var(--line);
+      box-shadow:0 8px 20px rgba(15,26,38,0.04);
+    }
 
-.btn-secondary:hover{
-  background:#fff;
-  border-color:#cdd8e3;
-  transform:translateY(-1px);
-  text-decoration:none;
-}
+    .btn-secondary:hover{
+      background:#fff;
+      border-color:var(--line-strong);
+      transform:translateY(-1px);
+    }
+
+    .hero-trust{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .trust-pill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:var(--navy);
+      font-size:13px;
+      font-weight:700;
+      box-shadow:0 8px 18px rgba(15,26,38,0.04);
+    }
 
     .hero-card{
-  background:linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
-  border:1px solid #dbe5ee;
-  border-radius:30px;
-  box-shadow:0 22px 55px rgba(15, 26, 38, 0.12);
-  padding:38px;
-  position:relative;
-  overflow:hidden;
-  min-height:460px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+      background:linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
+      border:1px solid #dbe5ee;
+      border-radius:30px;
+      box-shadow:var(--shadow-strong);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      min-height:500px;
+    }
 
-.hero-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(31,45,61,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31,45,61,0.05) 1px, transparent 1px);
-  background-size:32px 32px;
-  mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.35));
-  z-index:0;
-}
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(31,45,61,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,45,61,0.05) 1px, transparent 1px);
+      background-size:32px 32px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.35));
+      z-index:0;
+    }
 
-.hero-card::after{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:rgba(240,90,40,0.10);
-  top:-40px;
-  right:-40px;
-  filter:blur(10px);
-  z-index:0;
-}
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:rgba(240,90,40,0.10);
+      top:-40px;
+      right:-40px;
+      filter:blur(12px);
+      z-index:0;
+    }
 
-.hero-card img{
-  position:relative;
-  z-index:1;
-  width:100%;
-  max-width:400px;
-  margin:0 auto;
-  object-fit:contain;
-}
+    .hero-panel{
+      position:relative;
+      z-index:1;
+      display:grid;
+      gap:18px;
+      height:100%;
+      align-content:start;
+    }
+
+    .panel-box{
+      background:#fff;
+      border:1px solid #E1E9F1;
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 12px 26px rgba(15,26,38,0.06);
+    }
+
+    .panel-label{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:0.45px;
+      text-transform:uppercase;
+      color:var(--orange);
+    }
+
+    .panel-title{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .panel-text{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .metric{
+      background:#F8FAFC;
+      border:1px solid #E2EAF2;
+      border-radius:16px;
+      padding:16px;
+    }
+
+    .metric strong{
+      display:block;
+      font-size:14px;
+      color:var(--navy-deep);
+      margin-bottom:6px;
+    }
+
+    .metric span{
+      display:block;
+      font-size:14px;
+      color:var(--muted);
+    }
 
     .section{
       padding:88px 0;
@@ -288,78 +441,132 @@
 
     .section-heading{
       margin-bottom:36px;
+      max-width:800px;
     }
 
     .section-heading h2{
       margin:0 0 12px;
       font-size:40px;
-      line-height:1.1;
+      line-height:1.08;
       letter-spacing:-0.8px;
       color:var(--navy-deep);
     }
 
     .section-heading p{
       margin:0;
-      max-width:760px;
       font-size:18px;
-      color:var(--gray);
+      color:var(--muted);
     }
 
     .services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:24px;
-}
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:24px;
+    }
 
     .service-card{
-  background:linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
-  border:1px solid #e3ebf2;
-  border-radius:24px;
-  box-shadow:0 14px 34px rgba(15,26,38,0.07);
-  padding:30px;
-  min-height:100%;
-  transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  position:relative;
-  overflow:hidden;
-}
+      position:relative;
+      background:linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+      border:1px solid #E3EBF2;
+      border-radius:24px;
+      box-shadow:0 14px 34px rgba(15,26,38,0.07);
+      padding:30px;
+      min-height:100%;
+      transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      overflow:hidden;
+    }
 
-.service-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:5px;
-  background:linear-gradient(90deg, var(--orange), #ff8a5f);
-}
+    .service-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:5px;
+      background:linear-gradient(90deg, var(--orange), var(--orange-soft));
+    }
 
-.service-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 22px 48px rgba(15,26,38,0.12);
-  border-color:#d6e1eb;
-}
+    .service-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 22px 48px rgba(15,26,38,0.12);
+      border-color:#D6E1EB;
+    }
 
-.service-line{
-  width:56px;
-  height:56px;
-  border-radius:16px;
-  background:rgba(240,90,40,0.10);
-  margin-bottom:20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+    .service-icon{
+      width:56px;
+      height:56px;
+      border-radius:16px;
+      background:rgba(240,90,40,0.10);
+      margin-bottom:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-.service-line::after{
-  content:"";
-  width:24px;
-  height:24px;
-  border-radius:8px;
-  background:var(--orange);
-}
+    .service-icon::after{
+      content:"";
+      width:24px;
+      height:24px;
+      border-radius:8px;
+      background:var(--orange);
+    }
+
+    .service-card h3{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .service-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .service-card ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--text);
+    }
+
+    .service-card li{
+      margin-bottom:8px;
+      font-size:15px;
+    }
+
+    .proof{
+      background:var(--light);
+    }
+
+    .proof-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .proof-card{
+      background:#fff;
+      border:1px solid #E2EAF1;
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .proof-card h3{
+      margin:0 0 12px;
+      font-size:24px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .proof-card p{
+      margin:0;
+      color:var(--muted);
+    }
 
     .about-section{
-      background:var(--light);
+      background:#fff;
     }
 
     .about-grid{
@@ -370,21 +577,58 @@
     }
 
     .about-visual{
-      background:linear-gradient(135deg, #dfe8f0 0%, #f5f7fa 100%);
+      background:linear-gradient(135deg, #DFE8F0 0%, #F5F7FA 100%);
+      border:1px solid #E6EDF3;
       border-radius:28px;
-      padding:24px;
+      padding:28px;
       min-height:440px;
       display:flex;
       align-items:center;
       justify-content:center;
       box-shadow:var(--shadow);
-      border:1px solid #e6edf3;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .about-visual::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(31,45,61,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,45,61,0.05) 1px, transparent 1px);
+      background-size:28px 28px;
+      opacity:0.5;
+    }
+
+    .about-visual-inner{
+      position:relative;
+      z-index:1;
+      width:min(100%, 360px);
+      background:#fff;
+      border:1px solid #E1E9F1;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 16px 32px rgba(15,26,38,0.10);
     }
 
     .about-visual img{
-      max-width:340px;
-      width:100%;
+      width:72px;
+      height:72px;
       object-fit:contain;
+      margin-bottom:18px;
+    }
+
+    .about-visual h3{
+      margin:0 0 10px;
+      font-size:24px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .about-visual p{
+      margin:0;
+      color:var(--muted);
     }
 
     .about-content h2{
@@ -402,13 +646,72 @@
     }
 
     .about-list{
-      margin:20px 0 0;
-      padding-left:20px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:12px;
     }
 
     .about-list li{
-      margin-bottom:10px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
       color:var(--text);
+      font-size:16px;
+    }
+
+    .about-list li::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--orange);
+      margin-top:8px;
+      flex-shrink:0;
+    }
+
+    .process{
+      background:var(--light);
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:20px;
+    }
+
+    .process-step{
+      background:#fff;
+      border:1px solid #E2EAF1;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .process-step .step-number{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      background:rgba(240,90,40,0.12);
+      color:var(--orange);
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    .process-step h3{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.15;
+      color:var(--navy-deep);
+    }
+
+    .process-step p{
+      margin:0;
+      color:var(--muted);
     }
 
     .why-grid{
@@ -422,6 +725,7 @@
       padding:28px;
       min-height:100%;
       color:#fff;
+      box-shadow:0 16px 34px rgba(15,26,38,0.10);
     }
 
     .why-card:nth-child(1){
@@ -433,7 +737,7 @@
     }
 
     .why-card:nth-child(3){
-      background:linear-gradient(135deg, #42566d 0%, #60748b 100%);
+      background:linear-gradient(135deg, #42566D 0%, #60748B 100%);
     }
 
     .why-card h3{
@@ -445,6 +749,57 @@
     .why-card p{
       margin:0;
       color:rgba(255,255,255,0.88);
+    }
+
+    .faq{
+      background:#fff;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:16px;
+      max-width:900px;
+    }
+
+    .faq-item{
+      border:1px solid #E1E9F1;
+      border-radius:20px;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(15,26,38,0.04);
+      overflow:hidden;
+    }
+
+    .faq-item summary{
+      list-style:none;
+      cursor:pointer;
+      padding:20px 22px;
+      font-weight:800;
+      color:var(--navy-deep);
+      position:relative;
+    }
+
+    .faq-item summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .faq-item summary::after{
+      content:"+";
+      position:absolute;
+      right:22px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:22px;
+      color:var(--orange);
+      font-weight:700;
+    }
+
+    .faq-item[open] summary::after{
+      content:"−";
+    }
+
+    .faq-answer{
+      padding:0 22px 20px;
+      color:var(--muted);
     }
 
     .cta{
@@ -482,7 +837,7 @@
 
     .contact-grid{
       display:grid;
-      grid-template-columns:0.9fr 1.1fr;
+      grid-template-columns:0.92fr 1.08fr;
       gap:40px;
       align-items:start;
     }
@@ -496,18 +851,29 @@
 
     .contact-copy p{
       margin:0 0 18px;
-      color:rgba(255,255,255,0.82);
+      color:rgba(255,255,255,0.84);
       font-size:18px;
       max-width:540px;
     }
 
     .contact-points{
+      margin:0 0 26px;
       padding-left:18px;
-      color:rgba(255,255,255,0.88);
+      color:rgba(255,255,255,0.9);
     }
 
     .contact-points li{
       margin-bottom:10px;
+    }
+
+    .contact-details{
+      display:grid;
+      gap:12px;
+    }
+
+    .contact-details a{
+      color:#fff;
+      font-weight:700;
     }
 
     .form-card{
@@ -516,6 +882,23 @@
       border-radius:24px;
       padding:28px;
       box-shadow:0 18px 40px rgba(0,0,0,0.18);
+    }
+
+    .form-head{
+      margin-bottom:18px;
+    }
+
+    .form-head h3{
+      margin:0 0 8px;
+      font-size:28px;
+      line-height:1.1;
+      color:var(--navy-deep);
+    }
+
+    .form-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
     }
 
     .form-grid{
@@ -536,20 +919,20 @@
 
     label{
       font-size:14px;
-      font-weight:700;
+      font-weight:800;
       color:var(--navy);
     }
 
     input, select, textarea{
       width:100%;
       padding:14px 14px;
-      border:1px solid #d7e0ea;
+      border:1px solid #D7E0EA;
       border-radius:14px;
       font-size:15px;
-      font-family:inherit;
       color:var(--text);
       background:#fff;
       outline:none;
+      transition:border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     input:focus, select:focus, textarea:focus{
@@ -568,41 +951,47 @@
     }
 
     .form-note{
-      margin-top:12px;
+      margin-top:14px;
       font-size:13px;
-      color:var(--gray);
+      color:var(--muted);
+    }
+
+    .privacy-note{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
     }
 
     .footer-top{
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 20%),
-    linear-gradient(135deg, #0b121a 0%, #101a25 100%);
-  color:#fff;
-  padding:78px 0 32px;
-  position:relative;
-  overflow:hidden;
-}
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 20%),
+        linear-gradient(135deg, #0B121A 0%, #101A25 100%);
+      color:#fff;
+      padding:78px 0 32px;
+      position:relative;
+      overflow:hidden;
+    }
 
-.footer-top::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size:36px 36px;
-  opacity:0.22;
-  pointer-events:none;
-}
+    .footer-top::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size:36px 36px;
+      opacity:0.22;
+      pointer-events:none;
+    }
 
     .footer-grid{
-  display:grid;
-  grid-template-columns:1.2fr 0.8fr 0.8fr;
-  gap:36px;
-  align-items:start;
-  position:relative;
-  z-index:1;
-}
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr 0.85fr;
+      gap:36px;
+      align-items:start;
+      position:relative;
+      z-index:1;
+    }
 
     .footer-brand{
       display:flex;
@@ -645,7 +1034,7 @@
       align-items:center;
       justify-content:center;
       font-size:14px;
-      font-weight:700;
+      font-weight:800;
       transition:0.2s ease;
     }
 
@@ -660,28 +1049,23 @@
       color:#fff;
     }
 
-    .footer-links a{
-  display:block;
-  color:rgba(255,255,255,0.78);
-  font-size:15px;
-  line-height:1.7;
-  transition:0.2s ease;
-}
-
     .footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-    
-.footer-links a:hover{
-  color:#fff;
-  transform:translateX(2px);
-}
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
 
-    .footer-col .footer-links{
-  gap:12px;
-}
+    .footer-links a{
+      color:rgba(255,255,255,0.78);
+      font-size:15px;
+      line-height:1.7;
+      transition:0.2s ease;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      transform:translateX(2px);
+    }
 
     .footer-bottom{
       border-top:1px solid rgba(255,255,255,0.08);
@@ -693,24 +1077,40 @@
       flex-wrap:wrap;
       color:rgba(255,255,255,0.65);
       font-size:14px;
+      position:relative;
+      z-index:1;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
     }
 
     @media (max-width: 1040px){
       .hero h1{
-        font-size:52px;
+        font-size:50px;
       }
 
       .hero-grid,
       .about-grid,
       .contact-grid,
       .cta-wrap,
-      .footer-grid{
+      .footer-grid,
+      .proof-grid,
+      .why-grid,
+      .process-grid{
         grid-template-columns:1fr;
       }
 
-      .services,
-      .why-grid{
-        grid-template-columns:1fr;
+      .services{
+        grid-template-columns:1fr 1fr;
       }
     }
 
@@ -724,13 +1124,12 @@
         align-items:flex-start;
       }
 
-      .nav-links{
-        gap:16px;
-        flex-wrap:wrap;
+      .nav-menu{
+        gap:14px;
       }
 
       .hero{
-        padding:56px 0 54px;
+        padding:58px 0 54px;
       }
 
       .hero h1{
@@ -759,336 +1158,578 @@
         font-size:34px;
       }
 
-      .form-grid{
+      .mini-grid,
+      .form-grid,
+      .services{
         grid-template-columns:1fr;
+      }
+
+      .hero-card{
+        min-height:auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        transition:none !important;
+        animation:none !important;
       }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary navigation">
     <div class="container nav-inner">
-      <div class="brand">
-        <img src="logo.png" alt="BuildControl Pro logo">
+      <a class="brand" href="#top" aria-label="BuildControl Pro home">
+        <img src="logo.png" alt="BuildControl Pro logo" />
         <span>BuildControl Pro</span>
-      </div>
+      </a>
 
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <ul class="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="nav-cta" href="#contact">Request Info</a></li>
+      </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Estimating & Project Controls</span>
-        <h1>Construction estimating, BIM coordination, TAKT planning, documentation and project controls for contractors.</h1>
-        <p>
-  BuildControl Pro supports contractors and subcontractors working on U.S.
-  construction projects with estimating, BIM coordination, TAKT planning,
-  project documentation and project controls services.
-</p>
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Estimating • BIM • Documentation • Project Controls</span>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Request a Quote</a>
-          <a class="btn btn-secondary" href="#services">Explore Services</a>
-        </div>
-      </div>
+          <h1>Technical support for contractors who need tighter documentation, cleaner estimating, and better execution control.</h1>
 
-      <div class="hero-card">
-        <img src="logo.png" alt="BuildControl Pro">
-      </div>
-    </div>
-  </header>
-
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Services</h2>
-        <p>
-          Focused support for contractors who need clearer documentation,
-          stronger estimating and better project control.
-        </p>
-      </div>
-
-      <div class="services">
-  <div class="service-card">
-    <div class="service-line"></div>
-    <h3>Construction Estimating</h3>
-    <p>
-      Takeoffs, cost breakdowns and bid support for contractors working on
-      commercial, infrastructure and public works projects.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <div class="service-line"></div>
-    <h3>Project Documentation</h3>
-    <p>
-      RFIs, change orders, documentation logs and contract communication
-      support to help protect project performance.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <div class="service-line"></div>
-    <h3>Project Controls</h3>
-    <p>
-      Cost tracking, documentation control and structured project support
-      to improve clarity and reduce risk during execution.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <div class="service-line"></div>
-    <h3>BIM Coordination</h3>
-    <p>
-      BIM support and coordination workflows to help identify clashes,
-      improve design alignment and reduce field conflicts before installation.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <div class="service-line"></div>
-    <h3>TAKT Planning</h3>
-    <p>
-      Production-based planning support to improve workflow stability,
-      trade coordination and schedule reliability across active project zones.
-    </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section about-section" id="about">
-    <div class="container about-grid">
-      <div class="about-visual">
-        <img src="logo.png" alt="BuildControl Pro symbol">
-      </div>
-
-      <div class="about-content">
-        <h2>Technical support built for contractors.</h2>
-        <p>
-          BuildControl Pro helps contractors manage estimating, BIM coordination,
-          TAKT planning, documentation and project controls through structured workflows.
-        </p>
-        <p>
-          Our focus is clarity, organization and practical support for real construction projects.
-        </p>
-
-        <ul class="about-list">
-          <li>Construction estimating support</li>
-  <li>BIM coordination and design support</li>
-  <li>TAKT planning and production flow support</li>
-  <li>RFIs and change order documentation</li>
-  <li>Documentation logs and project control workflows</li>
-  <li>Support for contractors and subcontractors on U.S. projects</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="why">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Why BuildControl Pro</h2>
-        <p>
-          Structured support designed to improve visibility, documentation quality and project control
-          across active construction work.
-        </p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>Clearer documentation</h3>
           <p>
-            Improve communication, tracking and project visibility through cleaner RFIs, logs
-            and change documentation.
+            BuildControl Pro supports contractors and subcontractors on U.S. construction
+            projects with estimating support, BIM coordination, TAKT planning, RFI and
+            change order documentation, and structured project controls workflows.
           </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a Quote</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+
+          <div class="hero-trust" aria-label="Key service highlights">
+            <span class="trust-pill">Support for U.S. projects</span>
+            <span class="trust-pill">Contractor & subcontractor focused</span>
+            <span class="trust-pill">Documentation-driven workflows</span>
+            <span class="trust-pill">Structured technical support</span>
+          </div>
         </div>
 
-        <div class="why-card">
-          <h3>Stronger estimating support</h3>
-          <p>
-            Support bidding efforts with practical estimating workflows and disciplined breakdowns
-            for real project execution.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <h3>Better project control</h3>
-          <p>
-            Keep documentation organized, reduce confusion and support a more controlled project environment.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="container cta-wrap">
-      <div>
-        <h2>Need estimating or project documentation support?</h2>
-        <p>
-          Reach out to discuss your project needs and explore how BuildControl Pro can support your
-          estimating, documentation or project controls workflow.
-        </p>
-      </div>
-
-      <a class="btn btn-primary" href="#contact">Contact Us</a>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-copy">
-        <h2>Request Information</h2>
-        <p>
-          Submit your project details and we will contact you shortly.
-        </p>
-
-        <ul class="contact-points">
-  <li>Estimating support</li>
-  <li>BIM coordination support</li>
-  <li>TAKT planning support</li>
-  <li>RFIs and change order documentation</li>
-  <li>Project controls and documentation workflows</li>
-</ul>
-      </div>
-
-      <div class="form-card">
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="b97f45e4-eaa3-44f3-8442-380c62a5a5c6">
-          <input type="hidden" name="subject" value="BuildControl Pro Contact Form">
-          <input type="hidden" name="from_name" value="BuildControl Pro Website">
-          <input type="checkbox" name="botcheck" style="display:none;">
-
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-panel">
+            <div class="panel-box">
+              <span class="panel-label">Project Support Snapshot</span>
+              <h2 class="panel-title">Clearer takeoffs. Cleaner documentation. Better field coordination.</h2>
+              <p class="panel-text">
+                We help teams stay organized from preconstruction through active execution
+                with structured support across estimating, BIM, planning, RFIs, and change documentation.
+              </p>
             </div>
 
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company">
+            <div class="mini-grid">
+              <div class="metric">
+                <strong>Estimating Support</strong>
+                <span>Takeoffs, quantity breakdowns, bid support packages</span>
+              </div>
+              <div class="metric">
+                <strong>BIM Coordination</strong>
+                <span>Clash review support, coordination workflows, issue tracking</span>
+              </div>
+              <div class="metric">
+                <strong>Documentation</strong>
+                <span>RFI logs, change backup, communication tracking</span>
+              </div>
+              <div class="metric">
+                <strong>Project Controls</strong>
+                <span>Structured tracking, visibility, and workflow discipline</span>
+              </div>
             </div>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="text" id="phone" name="phone">
-            </div>
-
-            <div class="form-group full">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option>Construction Estimating</option>
-                <option>Project Documentation</option>
-                <option>Project Controls</option>
-                <option>RFI Management</option>
-                <option>Change Order Support</option>
-                <option>Cost Tracking</option>
-                <option>BIM Coordination</option>
-                <option>TAKT Planning</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="form-group full">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" placeholder="Describe your project and the support you need." required></textarea>
-            </div>
-
-            <div class="form-group full">
-              <button class="btn btn-primary submit-btn" type="submit">Submit Request</button>
+            <div class="panel-box">
+              <span class="panel-label">Built for Real Project Work</span>
+              <p class="panel-text">
+                Practical support for teams that need better control over preconstruction,
+                documentation flow, coordination, and execution visibility.
+              </p>
             </div>
           </div>
-        </form>
-
-        <div class="form-note">
-          We’ll review your request and follow up by email.
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-<footer class="footer-top">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="logo.png" alt="BuildControl Pro logo">
-          <span>BuildControl Pro</span>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Services built around the work that actually slows projects down</h2>
+          <p>
+            BuildControl Pro provides focused technical support where contractors typically lose
+            time, clarity, and control: takeoffs, coordination, planning, documentation, and execution tracking.
+          </p>
         </div>
 
-        <div class="footer-copy">
-          Construction estimating, documentation and project controls support
-          for contractors and subcontractors working on U.S. construction projects.
+        <div class="services">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>Construction Estimating</h3>
+            <p>
+              Estimating support for teams that need organized quantities, clearer scope
+              breakdowns, and stronger bid preparation.
+            </p>
+            <ul>
+              <li>Quantity takeoffs and cost breakdown support</li>
+              <li>Bid package organization</li>
+              <li>Scope clarification for pricing workflows</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>BIM Coordination</h3>
+            <p>
+              Coordination support that helps identify issues early, improve design alignment,
+              and reduce field conflict before installation.
+            </p>
+            <ul>
+              <li>Coordination workflow support</li>
+              <li>Clash review and issue tracking</li>
+              <li>Design alignment support for execution teams</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>TAKT Planning</h3>
+            <p>
+              Production-based planning support for contractors who want more stable workflow,
+              clearer trade sequencing, and better schedule reliability.
+            </p>
+            <ul>
+              <li>Zone-based planning support</li>
+              <li>Trade flow and sequence review</li>
+              <li>Production-oriented workflow structure</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>RFI & Change Documentation</h3>
+            <p>
+              Documentation support to help teams track communication, protect scope,
+              and maintain cleaner backup for project decisions and changes.
+            </p>
+            <ul>
+              <li>RFI logs and tracking support</li>
+              <li>Change order backup organization</li>
+              <li>Documentation control workflows</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>Project Controls Support</h3>
+            <p>
+              Structured support that improves visibility, consistency, and control across
+              active project execution.
+            </p>
+            <ul>
+              <li>Cost and documentation tracking support</li>
+              <li>Status visibility and structured reporting</li>
+              <li>Workflow discipline across project teams</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"></div>
+            <h3>Contractor-Focused Technical Support</h3>
+            <p>
+              Practical support for general contractors and specialty trades that need stronger
+              technical workflow without adding confusion to active projects.
+            </p>
+            <ul>
+              <li>Support aligned with field realities</li>
+              <li>Clear communication and organized deliverables</li>
+              <li>Flexible support across project phases</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="proof-title">What this support is designed to improve</h2>
+          <p>
+            The value is not “more paperwork.” The value is cleaner execution, better visibility,
+            and stronger control where project teams usually get exposed.
+          </p>
         </div>
 
-        <div class="socials">
-          <a href="https://www.linkedin.com/company/buildcontrol-pro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-          <a href="https://www.instagram.com/buildcontrolpro?igsh=N2xqa3YwY2d6cWFz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
-          <a href="https://www.fb.com/buildprooopoo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">fb</a>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>Preconstruction clarity</h3>
+            <p>
+              Better organized quantities, scope support, and estimating structure before work
+              moves into execution pressure.
+            </p>
+          </article>
+
+          <article class="proof-card">
+            <h3>Documentation control</h3>
+            <p>
+              More disciplined RFI, change, and communication tracking to reduce confusion and
+              improve accountability.
+            </p>
+          </article>
+
+          <article class="proof-card">
+            <h3>Execution visibility</h3>
+            <p>
+              Better coordination, planning structure, and workflow support to help teams stay
+              aligned during active project delivery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-visual-inner">
+            <img src="logo.png" alt="BuildControl Pro symbol" />
+            <h3>Built for contractors who need structure, not noise.</h3>
+            <p>
+              Our approach is practical: organized inputs, clear deliverables, stronger documentation,
+              and workflows that support real project execution.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h2>Technical support built around how construction teams actually work.</h2>
+          <p>
+            BuildControl Pro helps contractors and subcontractors manage estimating,
+            BIM coordination, TAKT planning, documentation, and project controls through
+            structured, execution-minded workflows.
+          </p>
+          <p>
+            The goal is straightforward: improve clarity, reduce avoidable friction, and support
+            more controlled project outcomes from preconstruction through active delivery.
+          </p>
+
+          <ul class="about-list">
+            <li>Estimating support for organized bid and quantity workflows</li>
+            <li>BIM coordination support to improve alignment before installation</li>
+            <li>TAKT planning support for better production flow and sequence stability</li>
+            <li>RFI and change order documentation support for cleaner project records</li>
+            <li>Project controls structure for improved visibility and execution discipline</li>
+            <li>Support tailored to contractors and subcontractors working on U.S. projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <h2>A simple, disciplined process</h2>
+          <p>
+            No bloated consulting theater. Just a practical workflow designed to understand the need,
+            organize the work, deliver support, and keep communication clear.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="step-number">1</div>
+            <h3>Project Review</h3>
+            <p>
+              We review your scope, documentation needs, constraints, and where support is needed most.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">2</div>
+            <h3>Scope Alignment</h3>
+            <p>
+              We define the service focus, expected deliverables, and workflow approach for your team.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">3</div>
+            <h3>Execution Support</h3>
+            <p>
+              We provide structured support across estimating, coordination, planning, and documentation.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number">4</div>
+            <h3>Ongoing Visibility</h3>
+            <p>
+              Work stays organized, communication stays clearer, and documentation stays easier to track.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why BuildControl Pro</h2>
+          <p>
+            Because contractors do not need vague consulting language. They need technical support
+            that is organized, useful, and tied to real project pressure.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <h3>Clearer documentation</h3>
+            <p>
+              Improve project visibility through better tracking, cleaner communication records,
+              and stronger RFI and change documentation.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <h3>Stronger technical support</h3>
+            <p>
+              Bring more structure to estimating, BIM workflows, planning logic, and coordination effort.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <h3>Better project control</h3>
+            <p>
+              Reduce confusion, improve consistency, and support a more disciplined execution environment.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Frequently asked questions</h2>
+          <p>
+            A few direct answers to the questions contractors usually ask before starting a conversation.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Who do you support?</summary>
+            <div class="faq-answer">
+              We support contractors and subcontractors working on U.S. construction projects who need help with estimating, BIM coordination, TAKT planning, project documentation, and controls workflows.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can support be scoped to a single need instead of a full package?</summary>
+            <div class="faq-answer">
+              Yes. Support can be focused on a specific need such as takeoffs, BIM coordination, RFI tracking, change order backup, planning support, or broader documentation and controls assistance.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What makes your support different?</summary>
+            <div class="faq-answer">
+              The focus is practical execution support. That means structured deliverables, cleaner workflows, clearer communication, and support aligned with actual project pressure rather than generic consulting language.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do we start?</summary>
+            <div class="faq-answer">
+              Submit your project details through the contact form. From there, we review the need, align on scope, and determine the best support path for your team.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container cta-wrap">
+        <div>
+          <h2 id="cta-title">Need estimating, coordination, or documentation support?</h2>
+          <p>
+            Tell us what your project team needs. We’ll review the scope and help determine
+            the right support path for your workflow.
+          </p>
+        </div>
+
+        <a class="btn btn-primary" href="#contact">Contact Us</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <h2>Request Information</h2>
+          <p>
+            Share your project details and we’ll review the scope, support need, and best next step.
+          </p>
+
+          <ul class="contact-points">
+            <li>Construction estimating support</li>
+            <li>BIM coordination support</li>
+            <li>TAKT planning support</li>
+            <li>RFI and change order documentation</li>
+            <li>Project controls and workflow support</li>
+          </ul>
+
+          <div class="contact-details">
+            <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
+            <a href="tel:+16694000740">(669) 400-0740</a>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="form-head">
+            <h3>Tell us about your project</h3>
+            <p>
+              Use the form below to share your scope, service need, and project context.
+            </p>
+          </div>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="b97f45e4-eaa3-44f3-8442-380c62a5a5c6" />
+            <input type="hidden" name="subject" value="BuildControl Pro Contact Form" />
+            <input type="hidden" name="from_name" value="BuildControl Pro Website" />
+            <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" />
+              </div>
+
+              <div class="form-group full">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Construction Estimating</option>
+                  <option>BIM Coordination</option>
+                  <option>TAKT Planning</option>
+                  <option>Project Documentation</option>
+                  <option>RFI Management</option>
+                  <option>Change Order Support</option>
+                  <option>Project Controls</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label for="message">Project Details</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe your project, support need, and any relevant timeline or scope context."
+                  required
+                  autocomplete="off"
+                ></textarea>
+              </div>
+
+              <div class="form-group full">
+                <button class="btn btn-primary submit-btn" type="submit">Submit Request</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-note">
+            We’ll review your request and follow up by email.
+          </div>
+          <div class="privacy-note">
+            By submitting this form, you agree to be contacted regarding your inquiry.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-brand" href="#top" aria-label="Back to top">
+            <img src="logo.png" alt="BuildControl Pro logo" />
+            <span>BuildControl Pro</span>
+          </a>
+
+          <div class="footer-copy">
+            Technical support for contractors and subcontractors who need stronger estimating,
+            cleaner documentation, BIM coordination, TAKT planning support, and tighter project control.
+          </div>
+
+          <div class="socials">
+            <a href="https://www.linkedin.com/company/buildcontrol-pro" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/buildcontrolpro" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
+            <a href="https://www.fb.com/buildprooopoo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">fb</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="#services">Construction Estimating</a>
+            <a href="#services">BIM Coordination</a>
+            <a href="#services">TAKT Planning</a>
+            <a href="#services">Project Documentation</a>
+            <a href="#services">Project Controls</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
+            <a href="tel:+16694000740">(669) 400-0740</a>
+            <a href="https://www.buildcontrolpro.com" target="_blank" rel="noopener noreferrer">www.buildcontrolpro.com</a>
+          </div>
         </div>
       </div>
 
-      <div class="footer-col">
-  <h4>Services</h4>
-  <div class="footer-links">
-    <a href="#services">Construction Estimating</a>
-    <a href="#services">Project Documentation</a>
-    <a href="#services">Project Controls</a>
-    <a href="#services">BIM Coordination</a>
-    <a href="#services">TAKT Planning</a>
-  </div>
-</div>
-
-      <div class="footer-col">
-  <h4>Contact</h4>
-  <div class="footer-links">
-    <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
-    <a href="tel:+16694000740">(669) 400-0740</a>
-    <a href="https://www.buildcontrolpro.com" target="_blank" rel="noopener noreferrer">www.buildcontrolpro.com</a>
-  </div>
-</div>
+      <div class="footer-bottom">
+        <div>BuildControl Pro © 2026</div>
+        <div>Structured support for clearer construction execution.</div>
+      </div>
     </div>
-
-    <div class="footer-bottom">
-      <div>BuildControl Pro © 2026</div>
-      <div>Build smart. Document better. Control the work.</div>
-    </div>
-  </div>
-</footer>
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "BuildControl Pro",
- "url": "https://buildcontrolpro.com",
- "logo": "https://buildcontrolpro.com/logo.png",
- "contactPoint": {
-   "@type": "ContactPoint",
-   "telephone": "+1-669-400-0740",
-   "contactType": "customer service",
-   "areaServed": "US",
-   "availableLanguage": "English"
- }
-}
-</script>
-  
+  </footer>
 </body>
 </html>
