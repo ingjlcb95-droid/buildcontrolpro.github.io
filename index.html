@@ -661,11 +661,19 @@
     }
 
     .footer-links a{
+  display:block;
   color:rgba(255,255,255,0.78);
   font-size:15px;
+  line-height:1.7;
   transition:0.2s ease;
 }
 
+    .footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+    
 .footer-links a:hover{
   color:#fff;
   transform:translateX(2px);
@@ -1023,12 +1031,14 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
+  <div class="footer-col">
+  <h4>Contact</h4>
   <div class="footer-links">
     <a href="mailto:projects@buildcontrolpro.com">projects@buildcontrolpro.com</a>
-    <a href="tel:+16694000740"><strong>(669) 400-0740</strong></a>
+    <a href="tel:+16694000740">(669) 400-0740</a>
     <a href="https://www.buildcontrolpro.com" target="_blank" rel="noopener noreferrer">www.buildcontrolpro.com</a>
   </div>
-      </div>
+</div>
     </div>
 
     <div class="footer-bottom">
